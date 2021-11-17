@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="layout.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/html" href="../public/fontawesome-free-5.15.4-web">
+    <link rel="shortcut icon" type="image/jpg" href="logo.jpg"/>
+    <title>SnapChat-Fake</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1 style="margin-left: 500px; letter-spacing:15px">SnapChat</h1>
+      <div id="login-form">
+          <h3>Enter Your Name!</h3>
+          <input type="text" name="" id="username" placeholder="Enter your name"/>
+          <input type="button" value="Enter" id="btn-register"/>
+      </div>
+      <div id="chat-form">
+          <div id="left">
+            <div id="box-title" style="color:#ccc">Online</div>
+            <div id="box-content">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <div id="right">
+            <h1 style="border-bottom: 1px solid #ccc;" id="say-hello">WelCome  <span style="color:#ccc;font-weight: bold; font-size: 20px;" id="current-user">
+            </span> To SnapChat
+            <input type="button" id="btn-logout" value="Logout">
+            </h3>
+            <div id="list-message">
+            </div>
+            <div id="alert"></div>
+            <input type="text" id="txt-message">
+            <input type="button" id="btn-send-message" value="Send">
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="handle.js"></script>
+</html>
