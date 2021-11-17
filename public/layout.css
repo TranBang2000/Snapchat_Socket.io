@@ -3,7 +3,7 @@
 }
 #login-form{
     width: 100%;
-    margin:100px 0 0 500px;
+    text-align:center;
 }
 #username{
     padding:10px;
@@ -88,6 +88,10 @@
     font-size: 20px;
     font-weight: bold;
     list-style-type: none;
+    background-color: #fff;
+    border-radius: 15px;
+    height:40px;
+    line-height: 40px;
 }
 body{
     background-color:#fffc00;

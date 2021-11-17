@@ -11,7 +11,7 @@ var listUser=[]
 io.on("connection", socket => {
     console.log(`Người dùng kết nối ${socket.id}`);
     socket.on('disconnect', () => {
-        console.log(`Người dừng ${socket.id} vừa ngắt kết nối`);
+        console.log(`Người dùng ${socket.id} vừa ngắt kết nối`);
     })
     socket.on('client-send-username',(data)=>{
         

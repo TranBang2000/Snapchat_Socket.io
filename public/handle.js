@@ -44,6 +44,13 @@ $(document).ready(function () {
   $("#btn-send-message").click(function () {
     socket.emit("user-send-message", $("#txt-message").val());
   });
+  $('#txt-message').bind("enterKey",function(e){ 
+    socket.emit("user-send-message", $("#txt-message").val());
+    $('#txt-message').val("");
+    //do stuff here 
+  }); 
+  $('#txt-message').keyup(function(e){ if(e.keyCode == 13) { $(this).trigger("enterKey"); } 
+  });
   $("#txt-message").focusin(function (e) {
     socket.emit("user-write-character");
   });
