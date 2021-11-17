@@ -36,7 +36,7 @@ $(document).ready(function () {
       alert("Mời bạn nhập Tên để tham gia chat");
     } else socket.emit("client-send-username", $("#username").val());
   });
-  $("#btn-logout").click(function () {
+  $("#btn-logout").click(function (data) {
     socket.emit("logout");
     $("#chat-form").hide(2000);
     $("#login-form").show(1000);
