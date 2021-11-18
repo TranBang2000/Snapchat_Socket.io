@@ -43,6 +43,7 @@ $(document).ready(function () {
   });
   $("#btn-send-message").click(function () {
     socket.emit("user-send-message", $("#txt-message").val());
+    $('#txt-message').val("");
   });
   $('#txt-message').bind("enterKey",function(e){ 
     socket.emit("user-send-message", $("#txt-message").val());
