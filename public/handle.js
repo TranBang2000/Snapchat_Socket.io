@@ -12,7 +12,7 @@ socket.on("server-send-list-user", function (data) {
   data.forEach(function (item) {
     //append chen them ptu moi
     $("#box-content").append(`
-            <div class="user">${item}</div>
+            <div class="user"><i class="icon-online fas fa-circle"></i>${item}</div>
         `);
   });
 });

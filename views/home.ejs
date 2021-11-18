@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="layout.css" />
     <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" type="text/html" href="../public/fontawesome-free-5.15.4-web">
     <link rel="shortcut icon" type="image/jpg" href="logo.jpg"/>
     <title>SnapChat-Fake</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/fontawesome.css">
+
   </head>
   <body>
     <div id="wrapper">
-      <h1 style="margin-left: 500px; letter-spacing:15px">SnapChat</h1>
+      <h1 style="margin-left: 500px; letter-spacing:15px">
+        SnapChat
+        <i class="bit-coin fab fa-bitcoin"></i>
+      </h1>
       <div id="login-form">
         <img src="logo.jpg" alt="Snapchat" style="width:300px">
         <h3>Enter Your Name!</h3>
@@ -21,16 +27,18 @@
       </div>
       <div id="chat-form">
           <div id="left">
-            <div id="box-title" style="color:#fff">Online</div>
+            <div id="box-title" style="font-weight: bold;;color:#19355a">
+              Online
+              <i class="fas fa-comment-dots"></i>
+              </div>
             <div id="box-content">
-              <i class="fas fa-user"></i>
             </div>
           </div>
           <div id="right">
-            <h1 style="border-bottom: 1px solid #ccc;" id="say-hello">WelCome  <span style="color:#ccc;font-weight: bold; font-size: 20px;" id="current-user">
-            </span> To SnapChat
+            <h1 style="border-bottom: 1px solid #ccc;" id="say-hello">WelCome  <span style="color:#fff;font-weight: bold; font-size: 30px;" id="current-user">
+            </span> To SnapChat <i class="snapchat-logo fab fa-snapchat-ghost"></i>
             <input type="button" id="btn-logout" value="Logout">
-            </h3>
+            </h1>
             <div id="list-message">
             </div>
             <div id="alert"></div>
