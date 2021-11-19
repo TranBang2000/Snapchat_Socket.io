@@ -12,7 +12,7 @@ socket.on("server-send-list-user", function (data) {
   data.forEach(function (item) {
     //append chen them ptu moi
     $("#box-content").append(`
-            <div class="user"><i class="icon-online fas fa-circle"></i>${item}</div>
+            <div class="user user-${item}"><i class="icon-online fas fa-circle"></i>${item}</div>
         `);
   });
 });
@@ -27,6 +27,14 @@ socket.on("server-send-character", function (data) {
 socket.on("server-send-alert", function () {
   $("#alert").html("");
 });
+socket.on('user-disconnected-server',function (data){
+  data.forEach(function (item) {
+    //remove  ptu 
+    $(`div`).remove(`.user-${item}`);
+
+  });
+})
+
 $(document).ready(function () {
   $("#login-form").show();
   $("#chat-form").hide();
@@ -58,4 +66,6 @@ $(document).ready(function () {
   $("#txt-message").focusout(function () {
     socket.emit("user-stop-write-character");
   });
+ 
+  
 });

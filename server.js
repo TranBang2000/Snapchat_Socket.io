@@ -11,6 +11,8 @@ var listUser=[]
 io.on("connection", socket => {
     console.log(`Người dùng kết nối ${socket.id}`);
     socket.on('disconnect', () => {
+        const newListToRemove=listUser.splice(listUser.indexOf(socket.Username),1)
+        io.sockets.emit('user-disconnected-server',newListToRemove)
         console.log(`Người dùng ${socket.id} vừa ngắt kết nối`);
     })
     socket.on('client-send-username',(data)=>{
