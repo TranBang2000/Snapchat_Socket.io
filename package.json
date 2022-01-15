@@ -18,5 +18,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TranBang2000/Snapchat_Socket.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TranBang2000/Snapchat_Socket.io/issues"
+  },
+  "homepage": "https://github.com/TranBang2000/Snapchat_Socket.io#readme"
 }
